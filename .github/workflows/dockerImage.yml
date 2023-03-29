@@ -1,7 +1,8 @@
 name: Michael's flow
+
 on:
   push:
-    branches: [main]
+    branches: 'main'
     workflow-dispatch:
 jobs:
   dockerBuildPush:
