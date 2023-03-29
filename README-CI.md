@@ -13,4 +13,6 @@
 - To authenticate DockerHub via the CLI, you can run the command "docker login -u "username"" which will then ask you for a password
   - It is recommended to use a token to login with specified permissions to avoid your docker account getting into the wrong hands
 - To push a container image to docker without actions, first run the command "dockertag local-image:tagname new-repo:tagname" followed by "docker push new-repo:tagname"
--  
+- To set a secret, go to "settings" inside of the github repo you would like to set a secret, then under "security/secrets and variables/actions" you will be able to add new secrets to the repo
+- For this project, the secrets that are set are the username and password for dockerHub. This is to prevent any random person from looking at the YAML file in the github workflows and seeing our username and password in plain text, giving them full acess to our dockerHub account.
+-   
