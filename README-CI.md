@@ -10,4 +10,7 @@
   - To view that the project is running, in your browser "127.0.0.1:80" will show the content being run inside the container if everything has been done correctly.
 ## Part 2
 - To create a public dockerHub repo, once an account has been created, at the top of the page, click "repositories", then "create repository", and give it a name and click the public button and create. 
-- 
+- To authenticate DockerHub via the CLI, you can run the command "docker login -u "username"" which will then ask you for a password
+  - It is recommended to use a token to login with specified permissions to avoid your docker account getting into the wrong hands
+- To push a container image to docker without actions, first run the command "dockertag local-image:tagname new-repo:tagname" followed by "docker push new-repo:tagname"
+-  
