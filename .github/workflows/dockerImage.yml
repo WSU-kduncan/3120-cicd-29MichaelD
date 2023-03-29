@@ -27,4 +27,4 @@ jobs:
         with: 
           context: "{{defaultContext}}:website"
           push: true
-          tags: DMichael/repo:latest  
+          tags: dmichael29/project 4:latest  
