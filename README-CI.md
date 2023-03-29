@@ -9,3 +9,5 @@
   - To run the container, command "docker run -d --name "name" -p 80:80 "image name"" will run the container with the image from above.
   - To view that the project is running, in your browser "127.0.0.1:80" will show the content being run inside the container if everything has been done correctly.
 ## Part 2
+- To create a public dockerHub repo, once an account has been created, at the top of the page, click "repositories", then "create repository", and give it a name and click the public button and create. 
+- 
