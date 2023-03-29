@@ -15,4 +15,7 @@
 - To push a container image to docker without actions, first run the command "dockertag local-image:tagname new-repo:tagname" followed by "docker push new-repo:tagname"
 - To set a secret, go to "settings" inside of the github repo you would like to set a secret, then under "security/secrets and variables/actions" you will be able to add new secrets to the repo
 - For this project, the secrets that are set are the username and password for dockerHub. This is to prevent any random person from looking at the YAML file in the github workflows and seeing our username and password in plain text, giving them full acess to our dockerHub account.
-- This workflow   
+- This workflow will build an image of the current state of the repo on a push and upload that image to dockerHub
+- The variables that are custom in my workflow are first, the username and password to my dockerHub account, along with the user that pushed the image to dockerHub and the repo that it will be going into on dockerHub
+## Part 3
+   
