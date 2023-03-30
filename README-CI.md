@@ -18,4 +18,4 @@
 - This workflow will build an image of the current state of the repo on a push and upload that image to dockerHub
 - The variables that are custom in my workflow are first, the username and password to my dockerHub account, along with the user that pushed the image to dockerHub and the repo that it will be going into on dockerHub
 ## Part 3
-   
+![diagram](/images/diagram.png)   
