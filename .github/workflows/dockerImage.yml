@@ -37,8 +37,7 @@ jobs:
       - name: BuildPush
         uses: docker/build-push-action@v4
         with: 
-          context: "{{defaultContext}}:website"
+          context: .
           push: true
-          tags: dmichael29/project4:latest  #To dockerHub
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{steps.meta.outputs.labels }}
