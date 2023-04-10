@@ -5,11 +5,22 @@ on:
   push:
     branches: 'main'
     workflow-dispatch:
+    tags:
+      - "v*.*.*"         
 
 jobs:
   dockerBuildPush:
     runs-on: ubuntu-latest
     steps:
+      - name: Get tag data
+        id: meta
+        uses: docker/metadata-action@v4
+        with: 
+          images: |
+            dmichael29/project4
+          tags: 
+            type=semver,pattern={{major}}
+            type=semver,pattern={{major}}.{{minor}}  
 
       - name: QEMU
         uses: docker/setup-qemu-action@v2
@@ -29,3 +40,5 @@ jobs:
           context: "{{defaultContext}}:website"
           push: true
           tags: dmichael29/project4:latest  #To dockerHub
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{steps.meta.outputs.labels }}
