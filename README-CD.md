@@ -20,4 +20,4 @@
   - When the webhook is active, it will listen for any new images added to dockerhub, when there is a new image, it will stop the container, remove it, pull the latest image from docker hub, and run that image in a new container
   - On my instance, the hook task definition file is located in the home directory of the user 
 - How to configure DockerHub to message the listener 
-  - On dockerHub inside of the repository, click on webhooks and then create. Give it a name and set it to listen on "http://hostIp:port/hooks/id
+  - On dockerHub inside of the repository, click on webhooks and then create. Give it a name and set it to listen on "http://hostIp:port/hooks/id"
